@@ -6,13 +6,13 @@
 import os
 from lxml import etree
 
-sql_out = r'C:\Users\cpinto\Desktop\Teste dtsx\teste'
-path = r'C:\Users\cpinto\Desktop\Teste dtsx'
+sql_out = r'.\Desktop\Teste dtsx\teste'
+path = r'.\Desktop\Teste dtsx'
 list_files = [f for f in os.listdir(path) if f.endswith('.dtsx')]
 
 for files in list_files: 
 
-    ssis_dtsx =rf'C:\Users\cpinto\Desktop\Python Dados\repos\ativa-dw\StageAtiva - Corrwin\{files}'
+    ssis_dtsx =rf'.\Desktop\Python Dados\repos\{files}'
        
     tree = etree.parse(ssis_dtsx)
     root = tree.getroot()
